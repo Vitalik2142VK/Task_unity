@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PointSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject _spawnEnemy;
+    [SerializeField] private Enemy _spawnEnemy;
     [SerializeField] private Vector3 _directionSpawnObject;
     [SerializeField] private Quaternion _spawnObjectRotation = Quaternion.Euler(0,0,0);
 
@@ -15,7 +15,7 @@ public class PointSpawn : MonoBehaviour
     {
         _spawnObjectPosition = transform.position;
 
-        GameObject enemy = Instantiate(_spawnEnemy, _spawnObjectPosition, _spawnObjectRotation);
+        Enemy enemy = Instantiate(_spawnEnemy, _spawnObjectPosition, _spawnObjectRotation);
         var movement = enemy.AddComponent<Movement>();
         movement.Direction = _directionSpawnObject;
     }

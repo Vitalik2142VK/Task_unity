@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 8157055031099439231, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
+  _spawnEnemy: {fileID: 1093228140594964756, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
   _directionSpawnObject: {x: 1, y: 0, z: 0}
   _spawnObjectRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &190266615
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 8157055031099439231, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
+  _spawnEnemy: {fileID: 1093228140594964756, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
   _directionSpawnObject: {x: 0, y: 0, z: 1}
   _spawnObjectRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &190266617
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 8157055031099439231, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
+  _spawnEnemy: {fileID: 1093228140594964756, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
   _directionSpawnObject: {x: -1, y: 0, z: 0}
   _spawnObjectRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &1465309903
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 8157055031099439231, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
+  _spawnEnemy: {fileID: 1093228140594964756, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
   _directionSpawnObject: {x: 0, y: 0, z: -1}
   _spawnObjectRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &2058145109
