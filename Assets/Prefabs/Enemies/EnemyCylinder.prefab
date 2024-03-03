@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8157055031099439231
+--- !u!1 &4362619987728121899
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7934461030136462074}
-  - component: {fileID: 6727229433958534419}
-  - component: {fileID: 1531397720997451557}
-  - component: {fileID: 1432286850189842487}
-  - component: {fileID: 706847060351181620}
-  - component: {fileID: 1093228140594964756}
+  - component: {fileID: 4560915368147360359}
+  - component: {fileID: 3781808445730831490}
+  - component: {fileID: 8858763630005539726}
+  - component: {fileID: 1893232692468387196}
+  - component: {fileID: 2344066501658789549}
+  - component: {fileID: 8342828505371744955}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyCylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7934461030136462074
+--- !u!4 &4560915368147360359
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157055031099439231}
+  m_GameObject: {fileID: 4362619987728121899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -69.413795, y: 0.9999995, z: 74.67}
+  m_LocalPosition: {x: -2.206, y: 1.38, z: -2.4336607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6727229433958534419
+--- !u!33 &3781808445730831490
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157055031099439231}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1531397720997451557
+  m_GameObject: {fileID: 4362619987728121899}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8858763630005539726
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157055031099439231}
+  m_GameObject: {fileID: 4362619987728121899}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,13 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1432286850189842487
+--- !u!136 &1893232692468387196
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157055031099439231}
+  m_GameObject: {fileID: 4362619987728121899}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -105,17 +105,17 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &706847060351181620
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!54 &2344066501658789549
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157055031099439231}
+  m_GameObject: {fileID: 4362619987728121899}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -136,13 +136,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1093228140594964756
+--- !u!114 &8342828505371744955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8157055031099439231}
+  m_GameObject: {fileID: 4362619987728121899}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3b78b484c2748744b1122f005281b9d, type: 3}
