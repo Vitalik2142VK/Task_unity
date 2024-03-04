@@ -4,6 +4,9 @@ public class Waypoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<MovementToPoints>().GetNextWaypoint();
+        TargetMovement movement = other.GetComponent<TargetMovement>();
+
+        if (movement is not null)
+            movement.GetNextWaypoint();
     }
 }

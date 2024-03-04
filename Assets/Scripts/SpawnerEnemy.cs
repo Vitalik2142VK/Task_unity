@@ -24,7 +24,7 @@ public class SpawnerEnemy : MonoBehaviour
     public void SpawnEnemy()
     {
         Enemy enemy = Instantiate(_spawnEnemy, _spawnPosition, _spawnRotation);
-        var movement = enemy.AddComponent<MovementToTarget>();
-        movement.Target = _targetForEnemy;
+        var movement = enemy.AddComponent<EnemyMovement>();
+        movement.SetTarget(_targetForEnemy);
     }
 }

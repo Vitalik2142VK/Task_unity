@@ -1,15 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
-public class MovementToPoints : MonoBehaviour
+public class TargetMovement : MonoBehaviour
 {
     [SerializeField] private Waypoint[] _allWaypoints;
     [SerializeField] private float _speed;
     [SerializeField] private bool _isLooped;
 
-    [SerializeField] private Queue<Waypoint> _waypoints;
+    private Queue<Waypoint> _waypoints;
     private Waypoint _currentWaypoint;
 
     private void Start()
