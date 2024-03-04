@@ -6,7 +6,6 @@ public class Waypoint : MonoBehaviour
     {
         TargetMovement movement = other.GetComponent<TargetMovement>();
 
-        if (movement is not null)
-            movement.GetNextWaypoint();
+        movement?.ReachedPoint();
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8858763630005539726}
   - component: {fileID: 1893232692468387196}
   - component: {fileID: 2344066501658789549}
-  - component: {fileID: 8342828505371744955}
+  - component: {fileID: 6325310576553713849}
   m_Layer: 0
   m_Name: EnemyCylinder
   m_TagString: Untagged
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &8342828505371744955
+--- !u!114 &6325310576553713849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +145,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4362619987728121899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b78b484c2748744b1122f005281b9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b4f63a830d1c0243b3e8cf1ef9d94e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 2
+  _target: {fileID: 0}

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpawnerEnemy : MonoBehaviour
 {
-    [SerializeField] private Enemy _spawnEnemy;
+    [SerializeField] private EnemyMovement _prefab;
     [SerializeField] private Target _targetForEnemy;
     [SerializeField] private Quaternion _spawnRotation = Quaternion.Euler(0,0,0);
 
@@ -13,7 +13,7 @@ public class SpawnerEnemy : MonoBehaviour
     {
         _spawnPosition = transform.position;
 
-        float heightEnemy = _spawnEnemy.transform.localScale.y;
+        float heightEnemy = _prefab.transform.localScale.y;
 
         if (transform.position.y < heightEnemy)
         {
@@ -23,8 +23,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        Enemy enemy = Instantiate(_spawnEnemy, _spawnPosition, _spawnRotation);
-        var movement = enemy.AddComponent<EnemyMovement>();
-        movement.SetTarget(_targetForEnemy);
+        EnemyMovement enemy = Instantiate(_prefab, _spawnPosition, _spawnRotation);
+        enemy.SetTarget(_targetForEnemy);
     }
 }
