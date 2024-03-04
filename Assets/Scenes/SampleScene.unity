@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 2579051104269886449, guid: 46517cbcd64efe04a901ed812d006af7, type: 3}
+  _prefab: {fileID: 6121080745204882908, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
   _targetForEnemy: {fileID: 678616910}
   _spawnRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1001 &109317149
@@ -282,12 +282,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ce0bf21b8fff241a51c8827ac64d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allWaypoints:
+  _waypoints:
   - {fileID: 1427230823}
   - {fileID: 1336693815}
   - {fileID: 912702297}
   - {fileID: 294697044}
   _speed: 2
+  _distanceActivationPoint: 2
   _isLooped: 1
 --- !u!114 &228413734 stripped
 MonoBehaviour:
@@ -310,7 +311,6 @@ GameObject:
   m_Component:
   - component: {fileID: 294697042}
   - component: {fileID: 294697044}
-  - component: {fileID: 294697043}
   m_Layer: 0
   m_Name: Waypoint (3)
   m_TagString: Untagged
@@ -333,27 +333,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 207120937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &294697043
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294697041}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &294697044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,12 +362,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ce0bf21b8fff241a51c8827ac64d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allWaypoints:
+  _waypoints:
   - {fileID: 1427230823}
   - {fileID: 1336693815}
   - {fileID: 912702297}
   - {fileID: 294697044}
   _speed: 2
+  _distanceActivationPoint: 2
   _isLooped: 1
 --- !u!114 &632007553 stripped
 MonoBehaviour:
@@ -429,12 +409,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ce0bf21b8fff241a51c8827ac64d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allWaypoints:
+  _waypoints:
   - {fileID: 1427230823}
   - {fileID: 1336693815}
   - {fileID: 912702297}
   - {fileID: 294697044}
   _speed: 2
+  _distanceActivationPoint: 2
   _isLooped: 1
 --- !u!1 &705507993
 GameObject:
@@ -711,7 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 2840290187540374773, guid: e1b6146f4e1280d43bee3b67ab0ad7a8, type: 3}
+  _prefab: {fileID: 8844947934075586265, guid: e1b6146f4e1280d43bee3b67ab0ad7a8, type: 3}
   _targetForEnemy: {fileID: 632007553}
   _spawnRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &887425295
@@ -739,7 +720,6 @@ GameObject:
   m_Component:
   - component: {fileID: 912702295}
   - component: {fileID: 912702297}
-  - component: {fileID: 912702296}
   m_Layer: 0
   m_Name: Waypoint (2)
   m_TagString: Untagged
@@ -762,27 +742,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 207120937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &912702296
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912702294}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &912702297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,7 +941,7 @@ MonoBehaviour:
   - {fileID: 1533124618}
   - {fileID: 887425294}
   _delay: 2
-  _isBeginSpawn: 1
+  _isSpawnWork: 1
 --- !u!4 &1085880379
 Transform:
   m_ObjectHideFlags: 0
@@ -1075,12 +1034,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ce0bf21b8fff241a51c8827ac64d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allWaypoints:
+  _waypoints:
   - {fileID: 1427230823}
   - {fileID: 1336693815}
   - {fileID: 912702297}
   - {fileID: 294697044}
   _speed: 2
+  _distanceActivationPoint: 2
   _isLooped: 1
 --- !u!114 &1300121457 stripped
 MonoBehaviour:
@@ -1103,7 +1063,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1336693813}
   - component: {fileID: 1336693815}
-  - component: {fileID: 1336693814}
   m_Layer: 0
   m_Name: Waypoint (1)
   m_TagString: Untagged
@@ -1126,27 +1085,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 207120937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1336693814
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336693812}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1336693815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1427230824}
   - component: {fileID: 1427230823}
-  - component: {fileID: 1427230825}
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
@@ -1204,27 +1141,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 207120937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1427230825
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427230822}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1533124617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 8342828505371744955, guid: d249949a43c877045b0141a8d2571374, type: 3}
+  _prefab: {fileID: 6325310576553713849, guid: d249949a43c877045b0141a8d2571374, type: 3}
   _targetForEnemy: {fileID: 228413734}
   _spawnRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &1533124619
@@ -1301,7 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06b591fccadae94f847c6a474b237b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnEnemy: {fileID: 1093228140594964756, guid: 895db072dbc93604ab8f98aec5db02a5, type: 3}
+  _prefab: {fileID: -8636987358171284738, guid: 46517cbcd64efe04a901ed812d006af7, type: 3}
   _targetForEnemy: {fileID: 1300121457}
   _spawnRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &1603038216
@@ -1326,11 +1242,11 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 711311628}
+  - {fileID: 1085880379}
   - {fileID: 86690593}
   - {fileID: 1603038216}
   - {fileID: 1533124619}
   - {fileID: 887425295}
-  - {fileID: 1085880379}
   - {fileID: 109317149}
   - {fileID: 1300121454}
   - {fileID: 835079700}

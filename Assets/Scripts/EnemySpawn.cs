@@ -1,9 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-public class RandomSpawnPoint : MonoBehaviour
+public class EnemySpawn : MonoBehaviour
 {
-    [SerializeField] private SpawnerEnemy[] _points;
+    [SerializeField] private EnemySpawnPoint[] _points;
     [SerializeField] private float _delay = 2;
     [SerializeField] private bool _isSpawnWork = false;
 

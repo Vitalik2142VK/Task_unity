@@ -1,7 +1,6 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpawnerEnemy : MonoBehaviour
+public class EnemySpawnPoint : MonoBehaviour
 {
     [SerializeField] private EnemyMovement _prefab;
     [SerializeField] private Target _targetForEnemy;
