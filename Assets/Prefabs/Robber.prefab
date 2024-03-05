@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1531397720997451557}
   - component: {fileID: 1432286850189842487}
   - component: {fileID: 706847060351181620}
-  - component: {fileID: 1093228140594964756}
+  - component: {fileID: 6871060968963332103}
+  - component: {fileID: 5829332385070540031}
   m_Layer: 0
   m_Name: Robber
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8157055031099439231}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -69.413795, y: 0.9999995, z: 74.67}
+  m_LocalPosition: {x: 0.12, y: 1, z: -21.929256}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136,7 +137,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1093228140594964756
+--- !u!114 &6871060968963332103
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +146,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 8157055031099439231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b78b484c2748744b1122f005281b9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5609d74cf023381479ffca36f33dd392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5829332385070540031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157055031099439231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c84e83685f4254287a39fbf0776c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _points:
+  - {fileID: 0}
+  - {fileID: 0}
+  _distanceActivationPoint: 2
+  _speed: 5
