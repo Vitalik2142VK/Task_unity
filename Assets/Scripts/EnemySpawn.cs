@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-public class RandomSpawnPoint : MonoBehaviour
+public class EnemySpawn : MonoBehaviour
 {
-    [SerializeField] private PointSpawn[] _points;
+    [SerializeField] private EnemySpawnPoint[] _points;
     [SerializeField] private float _delay = 2;
-    [SerializeField] private bool _isBeginSpawn = false;
+    [SerializeField] private bool _isSpawnWork = false;
 
     private WaitForSeconds _wait;
     private int _indexPointSpawn;
@@ -13,18 +13,14 @@ public class RandomSpawnPoint : MonoBehaviour
     private void Start()
     {
         _wait = new WaitForSeconds(_delay);
-        StartCoroutine(CroutineSpawn());
+        StartCoroutine(Spawning());
     }
 
-    private IEnumerator CroutineSpawn()
+    private IEnumerator Spawning()
     {
-        while (_isBeginSpawn)
+        while (_isSpawnWork)
         {
             _indexPointSpawn = Random.Range(0, _points.Length);
-
-
-            Debug.Log($"Текущий индекс - {_indexPointSpawn}, мах ел - {_points.Length}");
-
             _points[_indexPointSpawn].SpawnEnemy();
 
             yield return _wait;
