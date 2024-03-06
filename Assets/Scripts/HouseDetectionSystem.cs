@@ -5,8 +5,8 @@ public class HouseDetectionSystem : MonoBehaviour
 {
     private const int CountRobbersForActivation = 1;
 
-    public event Action OnRobberEntered;
-    public event Action OnRobberExited;
+    public event Action RobberEntered;
+    public event Action RobberExited;
 
     private int _countRobbersInside = 0;
 
@@ -16,7 +16,7 @@ public class HouseDetectionSystem : MonoBehaviour
 
         if (other.GetComponent<Robber>() != null && _countRobbersInside == CountRobbersForActivation)
         {
-            OnRobberEntered?.Invoke();
+            RobberEntered?.Invoke();
         }
     }
 
@@ -26,7 +26,7 @@ public class HouseDetectionSystem : MonoBehaviour
 
         if (other.GetComponent<Robber>() != null && _countRobbersInside < CountRobbersForActivation)
         {
-            OnRobberExited?.Invoke();
+            RobberExited?.Invoke();
         }
     }
 }

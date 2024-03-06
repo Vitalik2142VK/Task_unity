@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HouseSignaling : MonoBehaviour
@@ -12,9 +11,9 @@ public class HouseSignaling : MonoBehaviour
     [SerializeField, Min(0)] private int _timeChangeVolume;
     [SerializeField, Range(0, 1)] private float _volumeRange;
 
+    private Coroutine _coroutine;
     private WaitForSeconds _wait;
-    private float _currentVolume = 0;
-    private float _targetVolume;
+    private float _currentVolume = MinVolume;
 
     private void Start()
     {
@@ -23,45 +22,49 @@ public class HouseSignaling : MonoBehaviour
 
     private void OnEnable()
     {
-        _detectionSystem.OnRobberEntered += ActivateSound;
-        _detectionSystem.OnRobberExited += DisableSound;
+        _detectionSystem.RobberEntered += ActivateSound;
+        _detectionSystem.RobberExited += DisableSound;
     }
 
     private void OnDisable()
     {
-        _detectionSystem.OnRobberEntered -= ActivateSound;
-        _detectionSystem.OnRobberExited -= DisableSound;
+        _detectionSystem.RobberEntered -= ActivateSound;
+        _detectionSystem.RobberExited -= DisableSound;
     }
 
     private void ActivateSound()
     {
-        _wait = new WaitForSeconds(_timeChangeVolume);
-
-        _targetVolume = MaxVolume;
-
         _signaling.Play();
 
-        StartCoroutine(ChangingVolume());
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
+        
+        _coroutine = StartCoroutine(ChangingVolume(MaxVolume));
     }
 
     private void DisableSound()
     {
-        _targetVolume = MinVolume;
+        StopCoroutine(_coroutine);
+        _coroutine = StartCoroutine(ChangingVolume(MinVolume));
     }
 
-    private IEnumerator ChangingVolume()
+    private IEnumerator ChangingVolume(float targetVolume)
     {
-        _currentVolume += _volumeRange;
+        _wait = new WaitForSeconds(_timeChangeVolume);
 
-        while (_currentVolume != MinVolume)
+        if (_currentVolume == MinVolume)
+            _currentVolume = _volumeRange;
+
+        while (_currentVolume != targetVolume)
         {
             _signaling.volume = _currentVolume;
-            _currentVolume = Mathf.MoveTowards(_currentVolume, _targetVolume, _volumeRange);
+            _currentVolume = Mathf.MoveTowards(_currentVolume, targetVolume, _volumeRange);
 
             yield return _wait;
         }
 
-        _signaling.Stop();
+        if (_currentVolume == MinVolume)
+            _signaling.Stop();
 
         yield break;
     }
