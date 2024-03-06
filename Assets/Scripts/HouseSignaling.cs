@@ -7,6 +7,7 @@ public class HouseSignaling : MonoBehaviour
     private const int MaxVolume = 1;
     private const int MinVolume = 0;
 
+    [SerializeField] private HouseDetectionSystem _detectionSystem;
     [SerializeField] private AudioSource _signaling;
     [SerializeField, Min(0)] private int _timeChangeVolume;
     [SerializeField, Range(0, 1)] private float _volumeRange;
@@ -20,26 +21,32 @@ public class HouseSignaling : MonoBehaviour
         _signaling.loop = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnEnable()
     {
-        if (other.GetComponent<Robber>() != null)
-        {
-            _wait = new WaitForSeconds(_timeChangeVolume);
-
-            _targetVolume = MaxVolume;
-
-            _signaling.Play();
-
-            StartCoroutine(ChangingVolume());
-        }
+        _detectionSystem.OnRobberEntered += ActivateSound;
+        _detectionSystem.OnRobberExited += DisableSound;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnDisable()
     {
-        if (other.GetComponent<Robber>() != null)
-        {
-            _targetVolume = MinVolume;
-        }
+        _detectionSystem.OnRobberEntered -= ActivateSound;
+        _detectionSystem.OnRobberExited -= DisableSound;
+    }
+
+    private void ActivateSound()
+    {
+        _wait = new WaitForSeconds(_timeChangeVolume);
+
+        _targetVolume = MaxVolume;
+
+        _signaling.Play();
+
+        StartCoroutine(ChangingVolume());
+    }
+
+    private void DisableSound()
+    {
+        _targetVolume = MinVolume;
     }
 
     private IEnumerator ChangingVolume()
